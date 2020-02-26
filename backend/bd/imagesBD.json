@@ -1,0 +1,30 @@
+{
+    "imagenes": [
+        {
+            "nombre": "Imagen 1",
+            "link": "./assets/images/buscaT1.jpg",
+            "ID": "1"
+        },
+        {
+            "nombre": "Imagen 2",
+            "link": "./assets/images/buscaT2.jpg",
+            "ID": "2"
+        },
+        {
+            "nombre": "Imagen 3",
+            "link": "./assets/images/buscaT3.jpg",
+            "ID": "3"
+        },
+        {
+            "nombre": "Imagen 4",
+            "link": "./assets/images/buscaT4.jpg",
+            "ID": "4"
+        },
+        {
+            "nombre": "Imagen 5",
+            "link": "./assets/images/buscaT5.jpg",
+            "ID": "5"
+        }
+    ],
+    "clave": 1016
+}

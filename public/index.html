@@ -1,0 +1,93 @@
+<!-- tiempo 00:15:00 Planeacion -->
+<!-- tiempo 01:20:00 Diseño (Frontend) -->
+<!-- tiempo 00:17:00 Cronometro -->
+<!-- tiempo 00:17:00 Analisis (Backend) -->
+<!-- tiempo 03:59:37 Backend -->
+<!-- tiempo 12:00:00 integracion -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTT</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contentHeader">
+            <div class="logo">
+                <img src="./assets/images/tesoro.png" alt="Tesoro">
+            </div>
+            <div class="titulo">
+                <span>Encuentra el Tesoro</span>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="subcontent">
+            <article class="divJuego">
+                <div class="tituloJuego">
+                    <div class="seleccion">
+                        <label for="selecImg">Selecciona una imagen</label>
+                        <select onchange="getImage(this)" name="selecImg" id="slcImg" disabled>
+                            <option value="-1">Seleccionar</option>
+                        </select>
+                    </div>
+                    <div class="carga">
+                        <img id="gifCarga" src="./assets/images/loader.gif" alt="cargando">
+                    </div>
+                    <div class="crono">
+                        <label>Tiempo:</label>
+                        <span id="horaCro">00:</span>
+                        <span id="minCro">00:</span>
+                        <span id="segCro">00</span>
+                    </div>
+                    <div class="clicks">
+                        <label>Clicks:</label>
+                        <label id="conteoClicks">0</label>
+                    </div>
+                </div>
+                <div class="imgJuego">
+                    <img src="./assets/images/barco.jpg" alt="buscaT" id="imgJuego">
+                </div>
+                <div class="mensaje">
+                    <span id="spanPista">Selecciona la imagen</span>
+                </div>
+            </article>
+            <div class="sidebar">
+                <div class="tituloSideBar">
+                    <span>
+                        Ranking Jugadores
+                    </span>
+                </div>
+                <table class="ranking" border="1">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Clicks</th>
+                        <th>Tiempo</th>
+                    </tr>
+                    <tbody id="filasScore">
+                        <tr>
+                            <td colspan="4">
+                                Cargando información...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+    <script src="./assets/js/$crono.js"></script>
+    <script src="./assets/js/$main.js"></script>
+    <script src="./assets/js/$rankings.js"></script>
+
+    <div class="modal-content">
+        <div id="modalMensaje">content</div>
+    </div>
+</body>
+
+</html>

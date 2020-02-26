@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    font-family: cursive;
+}
+
+.contentHeader {
+    width: 90%;
+    margin: auto;
+    background-color: #6600CC;
+    height: 8em;
+}
+
+.logo {
+    width: 10%;
+    height: 8em;
+    float: left;
+}
+
+.logo img {
+    width: 81%;
+    float: right;
+    animation: palpitar infinite 5s linear;
+    outline: 1px solid transparent;
+}
+
+@keyframes palpitar {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.12, 1.12);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.animacionGanar {
+    animation: ganador infinite 1s;
+}
+
+@keyframes ganador {
+    0% {
+        background-color: #6600CC;
+        color: #FFCC00;
+    }
+    20% {
+        background-color: #FFCC00;
+        color: #000000;
+    }
+    40% {
+        background-color: #000000;
+        color: #FFCC00;
+    }
+    60% {
+        background-color: #CC0000;
+        color: #000000;
+    }
+    80% {
+        background-color: #FFCC00;
+        color: #CC0000;
+    }
+    100% {
+        background-color: #6600CC;
+        color: #FFCC00;
+    }
+}
+
+.titulo {
+    width: 90%;
+    height: 8em;
+    float: left;
+    color: #FFCC00;
+}
+
+.titulo span {
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    background-color: #CC0000;
+    height: 43em;
+    padding-top: 2em;
+}
+
+.footer {
+    width: 90%;
+    margin: auto;
+    background-color: #212121;
+    height: 4.3em;
+}
+
+.subcontent {
+    width: 90%;
+    margin: auto;
+    height: 41em;
+}
+
+.divJuego {
+    width: 70%;
+    background-color: #212121;
+    height: 41em;
+    float: left;
+    border-radius: 12px;
+}
+
+.sidebar {
+    width: 29.9%;
+    background-color: #212121;
+    height: 41em;
+    float: left;
+    margin-left: 0.1%;
+    border-radius: 12px;
+}
+
+.tituloJuego {
+    width: 100%;
+    background-color: #6600CC;
+    height: 3em;
+    line-height: 3em;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.seleccion {
+    width: 46%;
+    height: 3em;
+    float: left;
+}
+
+.clicks {
+    width: 25%;
+    height: 3em;
+    float: right;
+    text-align: right;
+}
+
+.crono {
+    width: 25%;
+    height: 3em;
+    float: right;
+    text-align: right;
+}
+
+.carga {
+    width: 2.4%;
+    float: left;
+    text-align: left;
+    display: flex;
+    height: 100%;
+}
+
+.carga img {
+    width: 1.6em;
+    margin: auto;
+    display: none;
+}
+
+.tituloJuego label {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    color: #FFCC00;
+}
+
+.tituloJuego select {
+    width: 13em;
+    height: 1.8em;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 0.9em;
+    background-color: lightgray;
+}
+
+.tituloSideBar {
+    width: 100%;
+    background-color: #6600CC;
+    height: 3em;
+    line-height: 3em;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.tituloSideBar span {
+    padding-left: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #FFCC00;
+}
+
+.imgJuego {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 11%;
+    overflow-y: hidden;
+    max-height: 25em;
+}
+
+.imgJuego img {
+    width: 620px;
+    border-radius: 8px;
+    height: -webkit-fill-available;
+}
+
+.mensaje {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1.3em;
+}
+
+.mensaje span {
+    width: 20%;
+    height: 1em;
+    background-color: #6600CC;
+    color: #FFCC00;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    border-radius: 6px;
+}
+
+.crono {
+    text-align: right;
+    padding-right: 0.8em;
+}
+
+.crono span {
+    font-size: 1.5em;
+    color: #FFCC00;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.modal-content-prueba {
+    display: flex !important;
+    animation: opacidad 200ms;
+}
+
+.modal {
+    width: 35%;
+    height: 18em;
+    margin: auto;
+    animation: opacidad 200ms;
+}
+
+@keyframes opacidad {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ranking {
+    border-color: #6600CC;
+    color: white;
+    margin: auto;
+    margin-top: 2em;
+    width: 90%;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.ranking th {
+    color: #FFCC00;
+}
+
+.modal-title, .modal-footer {
+    background-color: #6600CC;
+    color: #FFCC00;
+    height: 2.2em;
+    line-height: 2em;
+    padding: 0em 0em 0em 0.3em;
+    font-size: 1.1em;
+    clear: both;
+}
+
+.modal-body {
+    background-color: #212121;
+    color: white;
+    height: 12.2em;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+.btn {
+    width: auto;
+    font-size: 0.9em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-radius: 3px;
+    box-shadow: 4px 7px 10px -6px rgba(0, 0, 0, 0.75);
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.btn-gris {
+    background-color: #212121;
+    color: #FFCC00;
+    font-family: unset;
+}
+
+.derecha {
+    float: right;
+    margin: 0.3em 0.3em 0em 0em;
+}
+
+.mensaje_modal {
+    width: 70%;
+    float: left;
+    display: flex;
+    height: 12.2em;
+}
+
+.mensaje_modal div {
+    margin: auto;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.imagen_modal {
+    width: 30%;
+    float: left;
+    display: flex;
+    height: 12.2em;
+}
+
+.imagen_modal div {
+    width: 100%;
+    height: 12.2em;
+    margin: auto;
+    display: flex;
+}
+
+.imagen_modal div img {
+    width: 94%;
+    margin: auto;
+}
+
+.texto-peq {
+    font-size: 1.2em !important;
+    padding: 0em 1em 0em 1em;
+    text-align: justify !important;
+}
+
+.texto-peq input {
+    width: 73%;
+    font-size: 0.8em;
+    font-weight: 700;
+    background-color: #b7b7b7;
+    border-width: 0;
+    padding: 0.2em 0em 0.2em 0.2em;
+    border-radius: 5px;
+}
+
+.texto-peq hr {
+    border-color: #FFCC00;
+    border: 0.5px solid;
+}
+
+.sinNombre {
+    animation: parpadea 500ms infinite;
+}
+
+@keyframes parpadea {
+    0% {
+        color: red;
+    }
+    50% {
+        color: orange;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.divCargaModal{
+    padding: 0em 0em 0em 0em;
+    display: left;
+}
+
+.divCargaModal img{
+    width: 1.2em;
+    margin: 0.4em 0em 0em 0.4em;
+}
+
+.miniTitleModal{
+    float: left;
+}

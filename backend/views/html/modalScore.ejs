@@ -1,0 +1,51 @@
+<div class="modal-title">
+    <div class="miniTitleModal">
+        Fin del Juego
+    </div>
+    <div class="divCargaModal">
+        <img class="hidden" id="gifCargaModal" src="./assets/images/loader.gif" alt="cargando">
+    </div>
+    <input type="hidden" id="iniHid">
+</div>
+<div class="modal-body">
+    <% 
+        function formatNum(num){
+            return ((num < 10)? "0" + num: num);
+        }    
+    %>
+    <% if(datos.posicion == -1) {%>
+    <div class="mensaje_modal">
+        <div>
+            Has encontado el tesoro con <%= datos.clicks %> clicks y en
+            <%= formatNum(datos.tiempo.hr) + ":" + formatNum(datos.tiempo.min) + ":" + formatNum(datos.tiempo.seg) %> hh:mm:ss
+        </div>
+    </div>
+    <div class="imagen_modal">
+        <div class="logo">
+            <img src="./assets/images/tesoro.png" alt="Tesoro">
+        </div>
+    </div>
+    <% } else{%>
+    <div class="mensaje_modal">
+        <div class="texto-peq">
+            Has encontado el tesoro con <%= datos.clicks %> clicks y en
+            <%= formatNum(datos.tiempo.hr) + ":" + formatNum(datos.tiempo.min) + ":" + formatNum(datos.tiempo.seg) %> hh:mm:ss,
+            eres el nuevo mejor <%= datos.posicion+1 %>° lugar.
+            <hr>Nombre: <input maxlength="8" type="text" id="nombreJugador">
+        </div>
+    </div>
+    <div class="imagen_modal">
+        <div class="logo">
+            <img src="./assets/images/tesoro.png" alt="Tesoro">
+        </div>
+    </div>
+    <% } %>
+</div>
+<div class="modal-footer">
+    <span id="sinNombre" class="hidden sinNombre">Escribe tu nombre</span>
+    <% if(datos.posicion == -1) {%>
+    <button type="button" onclick="reiniciarJuego(),hideModal()" class="btn btn-gris derecha">Reiniciar Juego</button>
+    <% } else{%>
+    <button type="button" id="btnGuarda" onclick="guardaPuntaje()" class="btn btn-gris derecha">Guardar Puntaje</button>
+    <% } %>
+</div>
