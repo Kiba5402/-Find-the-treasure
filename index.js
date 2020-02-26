@@ -4,10 +4,11 @@ const app = express();
 const morgan = require('morgan');
 const router = require('./router/router');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 //configuracion
 app.set('views', './views/html');
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 //CORS
 app.use((req, res, next) => {
@@ -22,6 +23,11 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(router);
+
+
+//ruta principal
+app.use('/', express.static(__dirname + '/public'));
+
 
 //inicializando el servidor
 app.listen('3000', () => {
