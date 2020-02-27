@@ -4,7 +4,7 @@
   "description": "Juego de encontrar el tesoro en una imagen",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Cristhian Reyes",
   "license": "ISC",
