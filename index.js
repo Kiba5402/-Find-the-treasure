@@ -4,7 +4,6 @@ const app = express();
 const morgan = require('morgan');
 const router = require('./router/router');
 const bodyParser = require('body-parser');
-const path = require('path');
 
 //configuracion
 app.set('views', './views/html');
