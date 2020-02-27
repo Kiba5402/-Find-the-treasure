@@ -24,10 +24,8 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(router);
 
-
 //ruta principal
 app.use('/', express.static(__dirname + '/public'));
-
 
 //inicializando el servidor
 app.listen('3000', () => {
