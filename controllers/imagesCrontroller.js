@@ -27,7 +27,7 @@ function compruebaDist(xT, yT, xC, yC) {
 
 //funcion que devuleve un mensaje segun lo cerca que este el click del tesoro
 function verificaTesoro(dist) {
-    if (dist <= 100) {
+    if (dist <= 10) {
         return 0;
     } else if (dist < 30) {
         return 1;
