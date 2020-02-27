@@ -27,11 +27,13 @@ app.use(router);
 //ruta principal
 app.use('/', express.static(__dirname + '/public')); */
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.send('asdasd');
 });
 
+app.set('port', process.env.PORT || 3000);
+
 //inicializando el servidor
-app.listen('3000', () => {
+app.listen(app.get('port'), () => {
     console.log('Servidor corriendo en el puerto 3000');
 });
