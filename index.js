@@ -1,7 +1,7 @@
 //constantes
 const express = require('express');
 const app = express();
-const morgan = require('morgan');
+/* const morgan = require('morgan');
 const router = require('./router/router');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -25,7 +25,11 @@ app.use(morgan('dev'));
 app.use(router);
 
 //ruta principal
-app.use('/', express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/public')); */
+
+app.get('/', (req, res)=>{
+    res.send('asdasd');
+});
 
 //inicializando el servidor
 app.listen('3000', () => {
