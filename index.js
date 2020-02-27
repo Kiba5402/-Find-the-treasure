@@ -26,7 +26,7 @@ app.use(morgan('dev'));
 app.use(router);
 
 //ruta principal
-app.use('/', express.static(__dirname + '/public')); 
+app.use('/', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.send('asdasd');
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 //inicializando el servidor
 app.listen(app.get('port'), () => {
-    console.log('Servidor corriendo en el puerto 3000');
+    console.log('Servidor corriendo en el puerto', app.get('port'));
 });
 
 //importamos el modulo os
@@ -51,4 +51,4 @@ console.log('La release es: ' + os.release());
 console.log('Memoria Ram Libre: ' + os.freemem());
 
 //la memoria Ram total de la maquina
-console.log('Memoria total: ' + Number.parseFloat(os.totalmem()/1024**3).toFixed(2), 'GB');
+console.log('Memoria total: ' + Number.parseFloat(os.totalmem() / 1024 ** 3).toFixed(2), 'GB');
