@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', functIniRank);
-
 //variables
+const rutaRanking = window.location.protocol + '//' + window.location.host;
 
 function functIniRank() {
     getRankings();
@@ -8,7 +8,7 @@ function functIniRank() {
 
 function getRankings() {
     let ajax = new XMLHttpRequest();
-    let url = `http://localhost:3000/getrankings/`;
+    let url = `${rutaRanking}/getrankings/`;
 
     ajax.open('GET', url, true);
 
@@ -105,7 +105,7 @@ function formatTiempo(tiempo) {
 function compRanking(tiempo, clicks) {
 
     let ajax = new XMLHttpRequest();
-    let url = `http://localhost:3000/chekranking/`;
+    let url = `${rutaRanking}/chekranking/`;
 
     ajax.open('POST', url, true);
     //seteamos los datos a ernviar
@@ -167,7 +167,7 @@ function guardaPuntaje() {
 //funcion que envia el nuevo score para ser guradado
 function sendScore(nombre) {
     let ajax = new XMLHttpRequest();
-    let url = 'http://localhost:3000/setscore';
+    let url = `${rutaRanking}/setscore`;
     let gifCarga = document.getElementById('gifCargaModal');
 
     ajax.open('POST', url, true);

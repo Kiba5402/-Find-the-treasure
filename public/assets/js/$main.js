@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', functIni);
 var coorX = null;
 var coorY = null;
 var clicks = 0;
+const rutaMain = window.location.protocol + '//' + window.location.host;
 
 function functIni() {
     getImages();
@@ -12,7 +13,7 @@ function functIni() {
 function getImages() {
 
     let ajax = new XMLHttpRequest();
-    let url = `http://localhost:3000/getimages/`;
+    let url = `${rutaMain}/getimages/`;
 
     ajax.open('GET', url, true);
 
@@ -52,7 +53,7 @@ function getImage(slc) {
     if (slc.value != -1) {
         let gifCarga = document.getElementById('gifCarga');
         let ajax = new XMLHttpRequest();
-        let url = `http://localhost:3000/getimages/${slc.value}`;
+        let url = `${rutaMain}/getimages/${slc.value}`;
 
         //abrimos la conexion
         ajax.open('GET', url, true);
@@ -87,7 +88,7 @@ function getImage(slc) {
 //funcion que trae las coordenadas del tesoro
 function getCoor(x, y) {
     let ajax = new XMLHttpRequest();
-    let url = `http://localhost:3000/getcoor/${x}/${y}`;
+    let url = `${rutaMain}/getcoor/${x}/${y}`;
 
     //abrimos la conexion
     ajax.open('GET', url, false);
@@ -123,7 +124,7 @@ function clickImg(event) {
 //funcion que trae las coordenadas del tesoro
 function comprobarCoor(offX, offY) {
     let ajax = new XMLHttpRequest();
-    let url = `http://localhost:3000/compdist/`;
+    let url = `${rutaMain}/compdist/`;
     let gifCarga = document.getElementById('gifCarga');
 
     //seteamos los datos a ernviar
